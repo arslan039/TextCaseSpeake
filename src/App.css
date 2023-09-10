@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+  background-color: rgb(224, 122, 122);
+  width: 100dvw;
+  height: 100vh;
+}
+.item-style {
+  text-align: center;
+  background-color: rgb(134, 230, 241);
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+.times{
+  background-color: rgb(245, 177, 89);
+  text-align: center;
+  margin-top: 0;
+}
