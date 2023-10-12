@@ -7,7 +7,10 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import  { useState } from'react';
 import Alert from './components/Alert';
+import TextCaseSpeake from './components/TextCaseSpeake';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
 
 
 
@@ -48,19 +51,19 @@ const ToggleMode = () =>{
 
  <>
 
-<Navbar name= "TextUtils"  about = "About" mode = {mode} ToggleMode = {ToggleMode}label = {label}  />
+<Navbar name= "TextCaseSpeake"  about = "About" mode = {mode} ToggleMode = {ToggleMode}label = {label}  />
  <Alert alert = {alert} />
 
-<BrowserRouter>
+ <BrowserRouter>
       <Routes>
-
-<Route  path="home"  element={ <TextForm heading = "Enter the Text  to Apply some Operation:" change = {mode} ShowAlert = {ShowAlert} />} />
-
-<Route path="about" element={   <About />} />
-     
+      <Route  exact path="TextCaseSpeake" element={<TextCaseSpeake/> } />
+          <Route exact path="home" element={ <TextForm heading = "Enter the Text  to Apply some Operation:" change = {mode} ShowAlert = {ShowAlert} />} />
+          
+          <Route  exact path="about" element={ <About mode ={mode} />} />
+         
+        
       </Routes>
     </BrowserRouter>
-
  </> 
  
 );
